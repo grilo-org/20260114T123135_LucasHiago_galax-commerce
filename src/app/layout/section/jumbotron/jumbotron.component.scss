@@ -1,0 +1,18 @@
+.jumbotron-controller {
+  .content {
+    max-width: 50%;
+    width: 100%;
+    padding: var(--space-md);
+
+    //justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      margin-top: calc(var(--space-lg) * 2);
+      @media screen and (min-width: 1025px) {
+        max-width: 90%;
+      }
+    }
+  }
+}

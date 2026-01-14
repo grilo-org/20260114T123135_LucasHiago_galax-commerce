@@ -1,0 +1,24 @@
+<form class="form-controller" [formGroup]="dynamicForm" (ngSubmit)="sendData()">
+  <div class="form-container">
+    @for (field of fields; track field) {
+      <div class="form-row">
+        <div class="field-container">
+          @if (field.type !== 'textarea') {
+            <div>
+              <input [type]="field.type" [id]="field.controlName" [formControlName]="field.controlName" [placeholder]="field.label">
+              <label [for]="field.controlName">{{ field.label }}</label>
+            </div>
+          } @else {
+            <textarea [id]="field.controlName" [formControlName]="field.controlName" [placeholder]="field.label"></textarea>
+            <label [for]="field.controlName" [innerText]="field.label"></label>
+          }
+        </div>
+      </div>
+    }
+    <div class="form-row">
+      <div class="field-container">
+        <button type="submit" class="btn btn-default btn-stretch" [innerText]="update ? 'Editar' : 'Cadastrar'"></button>
+      </div>
+    </div>
+  </div>
+</form>

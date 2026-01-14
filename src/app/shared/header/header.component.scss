@@ -1,0 +1,27 @@
+.menu-controller {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg) var(--space-md);
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid rgba(0, 0, 0, .15);
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    cursor: pointer;
+  }
+
+  .logo, .menu, .actions {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    .menu-item {
+      display: flex;
+      flex: 1;
+      color: var(--primary-50);
+    }
+  }
+}

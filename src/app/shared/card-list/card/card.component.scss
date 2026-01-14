@@ -1,0 +1,52 @@
+.card-item {
+  max-width: 250px;
+  padding: var(--space-sm);
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: calc(var(--default-border-radius) * 2);
+  position: relative;
+  user-select: none;
+  .card-header {
+    .card-title {
+      margin: var(--space-sm) 0;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+    }
+  }
+  .card-body {
+    .card-details {
+      margin: var(--space-sm) 0;
+    }
+
+    &:hover {
+      .hide-details {
+        height: 80%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: white;
+        padding: var(--space-sm);
+        border-radius: calc(var(--default-border-radius) * 2);
+        z-index: 1;
+      }
+
+      .card-actions {
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+
+  .hide-details {
+    position: absolute;
+    height: 0;
+    bottom: 0;
+    width: 0;
+    overflow: hidden;
+    transition: height .45s ease-in-out !important;
+
+    .price {
+      font-weight: bold;
+      margin-top: var(--space-sm);
+    }
+  }
+}

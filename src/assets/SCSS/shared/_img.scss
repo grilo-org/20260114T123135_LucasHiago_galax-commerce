@@ -1,0 +1,19 @@
+img {
+  border-radius: var(--default-border-radius);
+  overflow: hidden;
+  object-fit: cover;
+  max-width: 100%;
+
+  &.image-error {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    &::before {
+      content: '';
+      background-color: rgba(0, 0, 0, .15);
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

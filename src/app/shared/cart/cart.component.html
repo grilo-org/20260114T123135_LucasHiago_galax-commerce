@@ -1,0 +1,17 @@
+<div class="cart-controller" [class.active]="isVisible && itemsCart.length > 0">
+  <div class="cart-header">
+    <ng-icon name="heroXMarkSolid" (click)="toggleCart()"></ng-icon>
+  </div>
+  <div class="cart-content">
+    <app-card-list [Items]="itemsCart" [Cart]="true"></app-card-list>
+  </div>
+  @if(itemsCart.length > 0) {
+    <div class="cart-action">
+      <div class="price"> {{ totalAmount | currency: 'BRL' }} </div>
+      <button class="btn btn-default btn-primary btn-stretch">Finalizar compra</button>
+      <button class="btn btn-outline btn-outline-bordered btn-stretch" (click)="callBudget()">Solicitar orçamento</button>
+    </div>
+  }
+</div>
+
+<app-dialog></app-dialog>

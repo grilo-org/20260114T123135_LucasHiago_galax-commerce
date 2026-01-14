@@ -1,0 +1,49 @@
+.dialog-controller {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  background: rgba(32, 5, 107, 0.26);
+  height: 0;
+  width: 0;
+  overflow: hidden;
+
+  transition: overflow .45s ease-in-out !important;
+
+  &.active {
+    width: 100vw;
+    height: 100vh;
+    overflow: visible;
+    z-index: 11;
+  }
+
+  .dialog-container {
+    width: 20vw;
+    height: auto;
+    background: white;
+    border-radius: var(--default-border-radius);
+    padding: var(--space-lg);
+
+    .dialog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: var(--space-md);
+
+      .dialog-title {
+        text-transform: uppercase;
+        font-size: var(--font-size-sm);
+        font-weight: bold;
+      }
+    }
+
+    @media screen and (max-width: 962px) {
+      width: 90vw;
+      height: auto;
+    }
+  }
+}

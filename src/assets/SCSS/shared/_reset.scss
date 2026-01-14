@@ -1,0 +1,39 @@
+/*
+* TODO: RESPONSIBLE FOR CHANGE ALL NATIVE TAGS AND NATIVE ANGULAR TAGS
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  transition: all .25s ease-in-out;
+  &:focus {
+    outline: none;
+  }
+
+  @import './webkit_scrollbar';
+}
+
+body {
+  background: var(--gray-50);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  transition: all .05s ease-in-out;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+ng-icon {
+  cursor: pointer;
+}
+

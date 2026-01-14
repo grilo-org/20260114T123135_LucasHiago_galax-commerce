@@ -1,0 +1,10 @@
+.user-controller {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .action-user {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}

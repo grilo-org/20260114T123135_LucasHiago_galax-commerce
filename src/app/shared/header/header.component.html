@@ -1,0 +1,19 @@
+<nav class="menu-controller">
+  <div class="logo">
+    Galax Commerce
+  </div>
+  <div class="menu">
+    @for (item of simpleMenu; track item) {
+      <a [routerLink]="item.link" class="menu-item"> {{ item.name }} </a>
+    }
+  </div>
+  <div class="actions">
+    <div class="user-actions">
+      <app-useractions></app-useractions>
+    </div>
+    <div class="cart-actions">
+      <ng-icon name="heroShoppingBagSolid" (click)="toggleCart()"></ng-icon>
+      <app-cart></app-cart>
+    </div>
+  </div>
+</nav>
